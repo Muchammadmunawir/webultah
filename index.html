@@ -6,10 +6,7 @@
     <title>HBD Little Sister! 🎀</title>
     
     <link rel="stylesheet" href="webultah.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
-    
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 <body>
     <div id="emoji-rain"></div>
@@ -22,8 +19,12 @@
         </div>
     </div>
 
-    <audio id="bg-music" loop>
-    </audio>
+    <div id="special-video-overlay" onclick="closeSpecialVideo()">
+        <div class="video-wrapper">
+            <video id="surprise-video" src="asset/vid.mp4" playsinline></video>
+            <p class="tap-hint">(Klik layar untuk tutup)</p>
+        </div>
+    </div>
 
     <div class="card-container" id="main-card">
         <div class="header-title">🎀 Happy Birthday 🎀</div>
@@ -41,13 +42,13 @@
                     <div class="icon-row">
                         <div class="circle-icon" onclick="spamHeart(event)">❤</div>
                         <div class="circle-icon" onclick="changeTheme()">★</div>
-                        <div class="circle-icon" id="icon-music-toggle" onclick="toggleMusic()">♫</div>
+                        <div class="circle-icon" onclick="playSpecialVideo()">♫</div>
                     </div>
                 </div>
                 
                 <div class="image-grid">
-                    <img src="asset/panel1.jpeg" class="mini-img" alt="foto1">
-                    <img src="asset/panel2.jpeg" class="mini-img" alt="foto2">
+                    <img src="asset/foto1.jpeg" class="mini-img" alt="foto1">
+                    <img src="asset/foto2.jpeg" class="mini-img" alt="foto2">
                 </div>
             </div>
 
@@ -71,13 +72,15 @@
                 <ul class="wish-list">
                     <li>✨ Semoga sehat selalu & panjang umur.</li>
                     <li>✨ Tidak jadi pemalas.</li>
-                    <li>🤰 Tidak gendut.</li>
                     <li>🤑 Rajin menabung.</li>
                     <li>🤓 Pintar & rajin belajar.</li>
                     <li>🤲 Jadi anak sholehah.</li>
-                    <li>✨ Tinggi 170++.</li>
                 </ul>
-                <button id="btn-surprise" class="btn-full">Klik buat Kejutan! 🎉</button>
+                <a href="https://wa.me/6287786187315?text=Makasih%20kak%20ucapannya!%20hehee" target="_blank" 
+                    style="display:block; text-align:center; margin-top:15px; text-decoration:none; 
+                    background:var(--accent-color); color:white; padding:10px; border-radius:15px; font-weight:bold;">
+                    Kirim Balasan ke Kakak 💌
+                </a>
             </div>
         </div>
 
@@ -85,8 +88,15 @@
             <div class="gallery-grid">
                 <img src="asset/foto1.jpeg" class="gallery-item">
                 <img src="asset/foto2.jpeg" class="gallery-item">
+                <img src="asset/foto5.jpeg" class="gallery-item wide">
+                <img src="asset/foto3.jpeg" class="gallery-item">
+                <img src="asset/foto4.jpeg" class="gallery-item tall">
                 <img src="asset/foto6.jpeg" class="gallery-item">
-                <img src="asset/foto4.jpeg" class="gallery-item">
+                <img src="asset/foto7.jpeg" class="gallery-item">
+                <img src="asset/foto9.jpeg" class="gallery-item wide">
+                <img src="asset/foto8.jpeg" class="gallery-item">
+                <img src="asset/foto10.jpeg" class="gallery-item">
+                <img src="asset/foto11.jpeg" class="gallery-item">
             </div>
         </div>
 
@@ -96,4 +106,3 @@
     <script src="webultah.js"></script>
 </body>
 </html>
-
